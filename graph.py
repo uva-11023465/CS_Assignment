@@ -25,8 +25,8 @@ def main(filename):
     plt.title('WO')
     plt.xlabel('year')
     plt.ylabel('WO [x1000]')
-    plt.show()
     plt.savefig('graph1.png')
+    plt.close()
     plt.plot(
         [int(d['Year']) for d in data],
         [float(d['NL Beer consumption [x1000 hectoliter]'].replace(',', '.')) for d in data]
@@ -34,8 +34,8 @@ def main(filename):
     plt.title('NL Beer consumption')
     plt.xlabel('year')
     plt.ylabel('NL Beer consumption [x1000 hectoliter]')
-    plt.show()
     plt.savefig('graph2.png')
+    plt.close()
 
 if __name__ == '__main__':
     main(sys.argv[1])
